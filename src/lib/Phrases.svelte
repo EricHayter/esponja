@@ -6,21 +6,28 @@
         return invoke('get_phrases' , {})
     }
 </script>
-    
+
 <div>
     {#await phrasesPromise}
-    <p>Getting Phrases...</p> 
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
 
     {:then phrases}
 
-    <div class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-
+    <ul class="collection gap-5">
         {#each phrases as phrase}
-        <li class="list-group-item">{phrase[0]}</li>
+        <li>{phrase[0]}</li>
         {/each}
-      </ul>
-    </div>
+    </ul>
 
     {:catch error}
     <p>Something broke</p>
