@@ -9,21 +9,10 @@
 
 <div>
     {#await phrasesPromise}
-    <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div><div class="gap-patch">
-                <div class="circle"></div>
-            </div><div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-        </div>
-    </div>
-
+    
     {:then phrases}
 
-    <ul class="collection gap-5">
+    <ul>
         {#each phrases as phrase}
         <li>{phrase[0]}</li>
         {/each}
