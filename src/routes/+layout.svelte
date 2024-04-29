@@ -9,8 +9,7 @@
 </nav>
 
 <div class="row">
-
-    <div class="col s12 m3 l2 light-green">
+    <div class="col s12 m2 l2 light-green">
         <ul>
             <p href="#" class="white-text text-darken-3">phrases</p>
             <p href="#">phrases</p>
@@ -18,7 +17,7 @@
         </ul>
     </div>
 
-    <div class="col s12 m8 l9">
+    <div class="col s12 m10 l10">
         <slot />
     </div>
 </div>
